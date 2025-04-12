@@ -1,23 +1,23 @@
 # 🍱 Food Recognition System (Soft Computing Project)
 
-This project implements a deep learning–based food image classification system using **InceptionV3**. It was developed as part of a soft computing course to demonstrate the application of convolutional neural networks (CNNs) in real-world computer vision problems.
+This project implements a deep learning–based food image classification system using **InceptionV3**. It was developed as part of a soft computing course to demonstrate the application of convolutional neural networks (CNNs) in real-world computer vision tasks.
 
 ---
 
 ## 🎯 Objective
 
-The goal of this system is to classify food images into **101 categories** with high accuracy. It leverages transfer learning, K-Fold cross-validation, and data augmentation to improve performance and robustness.
+The goal of this system is to classify food images into **101 categories** using a transfer learning approach. The model is trained to recognize different types of food based on image data, utilizing modern deep learning techniques like fine-tuning, data augmentation, and regularization.
 
 ---
 
 ## 🗂️ Project Structure
 
-food-recognition-system/ │ ├── dataset/ # Contains 'train', 'val', 'test' subfolders (not included in repo) │ ├── train/ │ ├── val/ │ └── test/ │ ├── train.ipynb # Main notebook for training the model ├── splitting_rule.ipynb # Script to handle K-Fold splitting and dataset organization ├── model.keras # Final trained model (excluded from GitHub due to size) ├── requirements.txt # All dependencies ├── README.md └── .gitignore
+food-recognition-system/ │ ├── dataset/ # Contains 'train', 'val', 'test' subfolders (not included in repo) │ ├── train/ │ ├── val/ │ └── test/ │ ├── train.ipynb # Main notebook for training the model ├── splitting_rule.ipynb # Notebook used to prepare dataset split ├── model.keras # Final trained model (excluded from GitHub due to size) ├── requirements.txt # List of Python dependencies ├── README.md └── .gitignore
 
 
 ---
 
-## 🧠 Model Summary
+## 🧠 Model Architecture
 
 - **Base Model:** InceptionV3 (pretrained on ImageNet)
 - **Input Size:** 299 x 299 x 3
@@ -28,52 +28,55 @@ food-recognition-system/ │ ├── dataset/ # Contains 'train', 'val', 'test
   - Dropout(0.5)
   - Dense(101, activation='softmax')
 - **Activation Functions:**
-  - ReLU for intermediate layers
+  - ReLU for dense layers
   - Softmax for the output layer
 
 ---
 
-## ⚙️ Key Features
+## ⚙️ Features & Workflow
 
-### ✅ Dataset Splitting
-- Dataset is divided into:
-  - **80,800 training images**
-  - **10,100 validation images**
-  - **10,100 test images**
-- Images are equally distributed across all 101 classes.
-- **5-Fold Cross-Validation** is applied using custom splitting logic (`splitting_rule.ipynb`).
+### 📁 Dataset Splitting
 
-### ✅ Data Augmentation
-To enhance generalization and reduce overfitting, the training set is augmented using:
+- Total images:
+  - **80,800 training**
+  - **10,100 validation**
+  - **10,100 test**
+- All images are evenly distributed across 101 classes.
+- Splitting logic is handled in `splitting_rule.ipynb`.
 
-- Rotation
-- Width/height shift
-- Zoom
-- Horizontal flip
+### 🧪 Preprocessing & Augmentation
 
-Implemented using `ImageDataGenerator` from Keras.
+- Preprocessing done using `ImageDataGenerator`:
+  - Rescale
+  - Rotation
+  - Zoom
+  - Width & height shift
+  - Horizontal flip
+- Applied only to the training dataset to prevent overfitting.
 
-### ✅ Overfitting Control
-To prevent overfitting and improve learning:
-- `Dropout(0.5)` used in dense layers
-- `EarlyStopping` to stop training when validation loss stops improving
-- `ModelCheckpoint` to save the best-performing model
-- `ReduceLROnPlateau` to dynamically adjust learning rate on validation loss plateaus
+### 🛡️ Overfitting Control
+
+The following techniques are used to minimize overfitting:
+
+- **Dropout(0.5)** in the dense layer
+- **EarlyStopping**: Stops training when validation loss plateaus
+- **ModelCheckpoint**: Saves the best model during training
+- **ReduceLROnPlateau**: Reduces learning rate if validation loss stops improving
 
 ---
 
-## 🧪 Evaluation Metrics
+## 📊 Evaluation Metrics
 
-- **Training/Validation Accuracy and Loss per Epoch**
-- **Training time per fold**
-- **Final Model Size**
-- **Confusion Matrix** and **Classification Report** per fold
+- Training & Validation **Accuracy** and **Loss**
+- **Training time per epoch**
+- **Final model size**
+- Test accuracy on unseen data
 
 ---
 
 ## 🧾 Requirements
 
-Install all dependencies with:
+Install all dependencies using:
 
 ```bash
 pip install -r requirements.txt
