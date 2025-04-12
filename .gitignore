@@ -1,0 +1,11 @@
+# Ignore dataset and model files
+dataset/
+*.h5
+*.keras
+
+# Ignore checkpoints and cache
+__pycache__/
+*.ipynb_checkpoints
+
+# macOS system file
+.DS_Store
