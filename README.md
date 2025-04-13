@@ -83,7 +83,7 @@ pip install -r requirements.txt
 
 ```
 ---
-##🚀 Running the Project
+## 🚀 Running the Project
 ⚠️ Dataset is not included in the GitHub repository due to its size (~10GB). You must download it manually.
 
 Place your dataset like this:
@@ -100,16 +100,16 @@ Then run the training notebook:
 jupyter notebook train.ipynb
 ```
 ---
-##📦 Pretrained Model File
+## 📦 Pretrained Model File
 Due to GitHub’s file size limit, the final trained model (model.keras) is not stored in this repo.
 
 ---
 
-##📘 License
+## 📘 License
 This project was created as part of a Soft Computing course and is intended for academic and educational purposes only.
 
 ---
-##✍️ Author
+## ✍️ Author
 Raakesh M J
 Soft Computing Course Project – 2025
 
