@@ -12,7 +12,7 @@ The goal of this system is to classify food images into **101 categories** using
 
 ## 🗂️ Project Structure
 
-food-recognition-system/ │ ├── dataset/ # Contains 'train', 'val', 'test' subfolders (not included in repo) │ ├── train/ │ ├── val/ │ └── test/ │ ├── train.ipynb # Main notebook for training the model ├── splitting_rule.ipynb # Notebook used to prepare dataset split ├── model.keras # Final trained model (excluded from GitHub due to size) ├── requirements.txt # List of Python dependencies ├── README.md └── .gitignore
+<pre> ## 🗂️ Project Structure ``` food-recognition-system/ ├── dataset/ # Contains 'train', 'val', 'test' subfolders (not included in repo) │ ├── train/ │ ├── val/ │ └── test/ │ ├── train.ipynb # Main notebook for training the model ├── splitting_rule.ipynb # Notebook used to prepare dataset split ├── model.keras # Final trained model (excluded from GitHub due to size) ├── requirements.txt # List of Python dependencies ├── README.md └── .gitignore ``` </pre>
 
 
 ---
