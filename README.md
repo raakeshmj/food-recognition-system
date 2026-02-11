@@ -1,23 +1,23 @@
-# 🍱 Food Recognition System (Soft Computing Project)
+# Food Recognition System (Soft Computing Project)
 
 This project implements a deep learning–based food image classification system using **InceptionV3**. It was developed as part of a soft computing course to demonstrate the application of convolutional neural networks (CNNs) in real-world computer vision tasks.
 
 ---
 
-## 🎯 Objective
+## Objective
 
 The goal of this system is to classify food images into **101 categories** using a transfer learning approach. The model is trained to recognize different types of food based on image data, utilizing modern deep learning techniques like fine-tuning, data augmentation, and regularization.
 
 ---
 
-## 🗂️ Project Structure
+## Project Structure
 
-<pre> ## 🗂️ Project Structure ``` food-recognition-system/ ├── dataset/ # Contains 'train', 'val', 'test' subfolders (not included in repo) │ ├── train/ │ ├── val/ │ └── test/ │ ├── train.ipynb # Main notebook for training the model ├── splitting_rule.ipynb # Notebook used to prepare dataset split ├── model.keras # Final trained model (excluded from GitHub due to size) ├── requirements.txt # List of Python dependencies ├── README.md └── .gitignore ``` </pre>
+<pre> ##  Project Structure ``` food-recognition-system/ ├── dataset/ # Contains 'train', 'val', 'test' subfolders (not included in repo) │ ├── train/ │ ├── val/ │ └── test/ │ ├── train.ipynb # Main notebook for training the model ├── splitting_rule.ipynb # Notebook used to prepare dataset split ├── model.keras # Final trained model (excluded from GitHub due to size) ├── requirements.txt # List of Python dependencies ├── README.md └── .gitignore ``` </pre>
 
 
 ---
 
-## 🧠 Model Architecture
+## Model Architecture
 
 - **Base Model:** InceptionV3 (pretrained on ImageNet)
 - **Input Size:** 299 x 299 x 3
@@ -33,9 +33,9 @@ The goal of this system is to classify food images into **101 categories** using
 
 ---
 
-## ⚙️ Features & Workflow
+##  Features & Workflow
 
-### 📁 Dataset Splitting
+###  Dataset Splitting
 
 - Total images:
   - **80,800 training**
@@ -44,7 +44,7 @@ The goal of this system is to classify food images into **101 categories** using
 - All images are evenly distributed across 101 classes.
 - Splitting logic is handled in `splitting_rule.ipynb`.
 
-### 🧪 Preprocessing & Augmentation
+###  Preprocessing & Augmentation
 
 - Preprocessing done using `ImageDataGenerator`:
   - Rescale
@@ -54,7 +54,7 @@ The goal of this system is to classify food images into **101 categories** using
   - Horizontal flip
 - Applied only to the training dataset to prevent overfitting.
 
-### 🛡️ Overfitting Control
+###  Overfitting Control
 
 The following techniques are used to minimize overfitting:
 
@@ -65,7 +65,7 @@ The following techniques are used to minimize overfitting:
 
 ---
 
-## 📊 Evaluation Metrics
+## Evaluation Metrics
 
 - Training & Validation **Accuracy** and **Loss**
 - **Training time per epoch**
@@ -74,7 +74,7 @@ The following techniques are used to minimize overfitting:
 
 ---
 
-## 🧾 Requirements
+## Requirements
 
 Install all dependencies using:
 
@@ -83,8 +83,8 @@ pip install -r requirements.txt
 
 ```
 ---
-## 🚀 Running the Project
-⚠️ Dataset is not included in the GitHub repository due to its size (~10GB). You must download it manually.
+##  Running the Project
+ Dataset is not included in the GitHub repository due to its size (~10GB). You must download it manually.
 
 Place your dataset like this:
 
@@ -100,16 +100,16 @@ Then run the training notebook:
 jupyter notebook train.ipynb
 ```
 ---
-## 📦 Pretrained Model File
+##  Pretrained Model File
 Due to GitHub’s file size limit, the final trained model (model.keras) is not stored in this repo.
 
 ---
 
-## 📘 License
+## License
 This project was created as part of a Soft Computing course and is intended for academic and educational purposes only.
 
 ---
-## ✍️ Author
+##  Author
 Raakesh M J
 Soft Computing Course Project – 2025
 
